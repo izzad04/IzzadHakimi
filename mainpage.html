@@ -1,0 +1,96 @@
+<html> 
+<head> 
+<title>Main Page</title> 
+<link rel="stylesheet" href="css/mainpage.css"> 
+
+</head> 
+<body> 
+  
+ <marquee scrolldelay="100"><h1> Welcome to KIMI WORLD </h1></marquee> 
+  
+  <table border="0" align="center" width="1330" bgcolor="#aed6f1" style="border-collapse:collapse;"> 
+  <tr height="50" > 
+   <td width="100" align="center"><a href="biodata.html"> Biodata</a></td> 
+   <td width="100" align="center"><a href="sport.html"> Sport</a></td> 
+   <td width="100" align="center">Education</td> 
+   <td width="100" align="center">Achievement</td> 
+   <td width="100" align="center">Hobby</td> 
+
+    
+  </tr> 
+
+  <tr> 
+   <td colspan="7" height="400" bgcolor= "#FAF0E6"> 
+   <div class="slideshow-container"> 
+ 
+<div class="mySlides fade"> 
+  <img src="image/picmainpage.jpg" width="200" alt="picmainpage"> 
+  <div class="centered-text">“Success is not final; failure is not fatal: It is the courage to continue that counts.” —Winston Churchill</div> 
+</div> 
+ 
+<div class="mySlides fade">
+  <img src="image/pic2.jpg" width="200" alt="pic2"> 
+  <div class="centered-text"> You will face the struggles, you will face betrayal. But one thing that surely , your hardwork would paid off, always trust the process.</div> 
+</div> 
+<br>
+<br>
+ 
+<div class="mySlides fade"> 
+  <img src="image/picmainpage2.jpg" width="200"> 
+  <div class="centered-text">Caption Three</div> 
+</div> 
+ 
+<a class="prev" onclick="plusSlides(-1)">❮</a> 
+<a class="next" onclick="plusSlides(1)">❯</a> 
+ 
+</div> 
+
+<br> 
+<br>
+
+<div style="text-align:center"> 
+  <span class="dot" onclick="currentSlide(1)"></span>  
+  <span class="dot" onclick="currentSlide(2)"></span>  
+  <span class="dot" onclick="currentSlide(3)"></span>  
+</div> 
+   </td> 
+  </tr> 
+   
+    <tr height="20"> 
+    </tr> 
+
+    </table> 
+
+<script> 
+let slideIndex = 1; 
+showSlides(slideIndex); 
+ 
+function plusSlides(n) { 
+  showSlides(slideIndex += n); 
+} 
+ 
+function currentSlide(n) { 
+  showSlides(slideIndex = n); 
+} 
+ 
+function showSlides(n) { 
+  let i; 
+  let slides = document.getElementsByClassName("mySlides"); 
+  let dots = document.getElementsByClassName("dot"); 
+  if (n > slides.length) {slideIndex = 1}     
+  if (n < 1) {slideIndex = slides.length} 
+  for (i = 0; i < slides.length; i++) { 
+    slides[i].style.display = "none";   
+  } 
+  for (i = 0; i < dots.length; i++) { 
+    dots[i].className = dots[i].className.replace(" active", ""); 
+  } 
+  slides[slideIndex-1].style.display = "block";   
+  dots[slideIndex-1].className += " active"; 
+} 
+</script> 
+
+  </body> 
+</html> 
+  </body> 
+</html>
