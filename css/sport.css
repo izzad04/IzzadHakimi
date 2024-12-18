@@ -1,0 +1,150 @@
+ /* General Body Styling */
+ body 
+ {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9f9;
+    color: #333;
+}
+
+/* Marquee Styling */
+marquee 
+{
+    font-size: 30px;
+    font-weight: bold;
+    color: #5b2c6f;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-bottom: 4px solid #5dade2;
+}
+
+/* Navigation Bar */
+.nav-container 
+{
+    background-color: #5dade2;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container a 
+{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.nav-container a:hover 
+{
+    background-color: #2e86c1;
+    border-radius: 5px;
+}
+
+/* Header Styling */
+h1 
+{
+    text-align: center;
+    color: #154360;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+hr 
+{
+    border: none;
+    height: 5px;
+    background-color: #5dade2;
+    margin: 10px 0;
+}
+
+/* Main Content Paragraph */
+p, font 
+{
+    line-height: 1.8;
+    text-align: justify;
+    color: #2c3e50;
+}
+
+/* Table Styling */
+table 
+{
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+caption 
+{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #5dade2;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+th, td 
+{
+    border: 2px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+th 
+{
+    background-color: #5dade2;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) 
+{
+    background-color: #f2f3f4;
+}
+
+tr:hover 
+{
+    background-color: #d5dbdb;
+    transition: 0.3s;
+}
+
+/* Image and Video Styling */
+img, video 
+{
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #5dade2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Wrapper */
+.content-wrapper 
+{
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer 
+{
+    text-align: center;
+    margin: 30px 0 10px 0;
+    color: #555;
+    font-size: 14px;
+}
