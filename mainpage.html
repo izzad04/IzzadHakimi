@@ -1,95 +1,127 @@
-<html> 
-<head> 
-<title>Main Page</title> 
-<link rel="stylesheet" href="css/mainpage.css"> 
+<html>
+<head>
+    <title>Main Page</title>
+</head>
 
-</head> 
-<body> 
+<link rel="stylesheet" href="css/mainpage.css">
+
+<body>
+
+    <!-- Header -->
+    <marquee scrolldelay="100"><h1>Welcome to KIMI WORLD</h1></marquee>
+    <p id="datetime"></p>
+
+    <!-- Navigation -->
+    <table>
+        <tr>
+            <td><a href="mainpage.html">Home</a></td>
+            <td><a href="biodata.html">About Me</a></td>
+            <td><a href="sport.html">Sport</a></td>
+            <td><a href="experience.html">Experience</a></td>
+            <td><a href="picture.html">My Picture</a></td>
+            
+        </tr>
+    </table>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="mySlides">
+            <img src="image/picmainpage.jpg" alt="Slide 1">
+            <div class="quote-container">
+                “Success is not final; failure is not fatal: It is the courage to continue that counts.” 
+                <sub>— Winston Churchill</sub>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="mySlides">
+            <img src="image/pic2.jpg" alt="Slide 2">
+            <div class="quote-container">
+                “If you focus on results, you will never change. If you focus on change, you will get results.” 
+                <sub>— Jack Dixon</sub>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="mySlides">
+            <img src="image/picmainpage2.jpg" alt="Slide 3">
+            <div class="quote-container">
+                “If you are working on something that you really care about, you don’t have to be pushed. The vision pulls you.” 
+                <sub>— Steve Jobs</sub>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <!-- Dots Navigation -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Display Date and Time
+        function updateDateTime() {
+            const datetimeElement = document.getElementById('datetime');
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            datetimeElement.textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+
+        // Slideshow Logic
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            const dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+
+            for (i = 0; i < slides.length; i++) slides[i].style.display = "none";
+            for (i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+
+            slides[slideIndex - 1].style.display = "flex";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+        <!-- Footer -->
+        <div class="footer">
+          &copy; 2024 KIMI WORLD | All Rights Reserved.
+          <p> Follow me on:
+              <a href="https://www.instagram.com/_izzad04/profilecard/?igsh=MWsxcDJ6dXMxNnczOQ==" target="_blank">
+                  <img src="image/logoFB.png" alt="Facebook" style="width: 40px; height: 40px;"> 
+              </a>
   
- <marquee scrolldelay="100"><h1> Welcome to KIMI WORLD </h1></marquee> 
+              <a href="https://www.instagram.com/_izzad04/profilecard/?igsh=MWsxcDJ6dXMxNnczOQ==" target="_blank">
+                  <img src="image/logoIG.png" alt="Instagram" style="width: 40px; height: 40px;">
+              </a>
   
-  <table border="0" align="center" width="1330" bgcolor="#aed6f1" style="border-collapse:collapse;"> 
-  <tr height="50" > 
-  <td width="100" align="center"><a href="mainpage.html"> Home </a></td>
-  <td width="100" align="center"><a href="biodata.html"> About Me </a></td> 
-  <td width="100" align="center"><a href="sport.html"> Sport </a></td> 
-  <td width="100" align="center"><a href="education.html"> Education </a></td> 
-  <td width="100" align="center"><a href="achievement.html"> Achievement </a></td> 
-  <td width="100" align="center">Hobby</td> 
-  </tr> 
+              <a href="https://www.instagram.com/_izzad04/profilecard/?igsh=MWsxcDJ6dXMxNnczOQ==" target="_blank">
+                  <img src="image/logoTikTok.png" alt="TikTok" style="width: 40px; height: 40px;">
+              </a>
+          </p>
+      </div>
 
-  <tr> 
-   <td colspan="7" height="400" bgcolor= "#FAF0E6"> 
-   <div class="slideshow-container"> 
- 
-<div class="mySlides fade"> 
-  <img src="image/picmainpage.jpg" width="200" alt="picmainpage"> 
-  <div class="centered-text">“Success is not final; failure is not fatal: It is the courage to continue that counts.” <sub>— Winston Churchill</sub></div> 
-</div> 
- 
-<div class="mySlides fade">
-  <img src="image/pic2.jpg" width="200" alt="pic2"> 
-  <div class="centered-text">If you focus on results, you will never change. If you focus on change, you will get results.” <sub>– Jack Dixon</sub></div> 
-</div> 
-<br>
-<br>
- 
-<div class="mySlides fade"> 
-  <img src="image/picmainpage2.jpg" width="200"> 
-  <div class="centered-text">“If you are working on something that you really care about, you don’t have to be pushed. The vision pulls you.” <sub>— Steve Jobs</sub></div> 
-</div> 
- 
-<a class="prev" onclick="plusSlides(-1)">❮</a> 
-<a class="next" onclick="plusSlides(1)">❯</a> 
- 
-</div> 
-
-<br> 
-<br>
-
-<div style="text-align:center"> 
-  <span class="dot" onclick="currentSlide(1)"></span>  
-  <span class="dot" onclick="currentSlide(2)"></span>  
-  <span class="dot" onclick="currentSlide(3)"></span>  
-</div> 
-   </td> 
-  </tr> 
-   
-    <tr height="20"> 
-    </tr> 
-
-    </table> 
-
-<script> 
-let slideIndex = 1; 
-showSlides(slideIndex); 
- 
-function plusSlides(n) { 
-  showSlides(slideIndex += n); 
-} 
- 
-function currentSlide(n) { 
-  showSlides(slideIndex = n); 
-} 
- 
-function showSlides(n) { 
-  let i; 
-  let slides = document.getElementsByClassName("mySlides"); 
-  let dots = document.getElementsByClassName("dot"); 
-  if (n > slides.length) {slideIndex = 1}     
-  if (n < 1) {slideIndex = slides.length} 
-  for (i = 0; i < slides.length; i++) { 
-    slides[i].style.display = "none";   
-  } 
-  for (i = 0; i < dots.length; i++) { 
-    dots[i].className = dots[i].className.replace(" active", ""); 
-  } 
-  slides[slideIndex-1].style.display = "block";   
-  dots[slideIndex-1].className += " active"; 
-} 
-</script> 
-
-  </body> 
-</html> 
-  </body> 
+</body>
 </html>

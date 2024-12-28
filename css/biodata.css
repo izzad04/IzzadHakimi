@@ -1,5 +1,6 @@
 /* General Body Styling */
-body {
+body 
+{
     background-size: cover;
     background-attachment: fixed;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -9,7 +10,8 @@ body {
 }
 
 /* Marquee Styling */
-marquee {
+marquee 
+{
     font-size: 30px;
     font-weight: bold;
     color: #5b2c6f;
@@ -19,14 +21,16 @@ marquee {
 }
 
 /* Navigation Bar */
-.nav-container {
+.nav-container 
+{
     background-color: #5dade2;
     text-align: center;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.nav-container a {
+.nav-container a 
+{
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -36,13 +40,15 @@ marquee {
     transition: all 0.3s ease;
 }
 
-.nav-container a:hover {
+.nav-container a:hover 
+{
     background-color: #2e86c1;
     border-radius: 5px;
 }
 
 /* Main Section */
-.about-section {
+.about-section 
+{
     width: 80%;
     margin: 40px auto;
     background-color: rgba(255, 255, 255, 0.9);
@@ -51,7 +57,8 @@ marquee {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.about-section h1 {
+.about-section h1 
+{
     text-align: center;
     color: #154360;
     margin-bottom: 20px;
@@ -94,20 +101,28 @@ marquee {
     transform: translateY(-5px);
 }
 
-.content-card h3 {
+.content-card h3 
+{
     color: #1f618d;
     margin-bottom: 10px;
 }
 
-.content-card p {
+.content-card p 
+{
     font-size: 16px;
     line-height: 1.6;
 }
 
 /* Footer */
-.footer {
+.footer 
+{
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
     color: #333;
     font-size: 14px;
+}
+
+a 
+{
+  text-decoration: none;
 }

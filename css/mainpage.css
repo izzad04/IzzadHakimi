@@ -1,167 +1,151 @@
-body
-{ 
-  background-color:#DE5D83;
-  font-family: Century Gothic;
-  background-position: center; 
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header Styling */
+        marquee h1 {
+            color: #0077c0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        #datetime {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Navigation Styling */
+        table {
+            width: 100%;
+            background-color: #aed6f1;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td {
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        td a {
+            text-decoration: none;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        td a:hover {
+            color: #ff5733;
+        }
+
+        /* Slideshow Styling */
+        .slideshow-container {
+            position: relative;
+            max-width: 90%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mySlides {
+            display: none;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .mySlides img {
+            width: 45%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .quote-container {
+            width: 45%;
+            padding: 20px;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .quote-container sub {
+            font-size: 16px;
+            color: #ffcccb;
+        }
+
+        /* Navigation Arrows */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+/* Dots Navigation */
+.dot 
+{
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-table
+.dot.active 
 {
-  border-collapse:collapse;
-  background-color: #FFFFFF;
-  color: rgb(180, 0, 0);
-  border: 15px;
-  border-radius: 2px;
-  font-family: Helvetica Bold;
-  font-size: 20px;
-  cursor: pointer;
-  margin-right: 8px;
-  transition: opacity 0.15s;
+  background-color: #0077c0;
+}
+
+.dot:hover 
+{
+  background-color: #555;
+}
+
+/* Footer */
+.footer 
+{
+  text-align: center;
+  margin: 30px 0;
+  color: #333;
+  font-size: 14px;
 }
 
 a 
 {
-  text-decoration: none; /* Removes the underline */
-  color: inherit; /* Optional: Makes the link inherit the text color */
+  text-decoration: none;
 }
-
-a:hover 
-{
-  opacity: 0.8;
-}
-
-a:active 
-{
-  opacity: 0.5;
-}
-
-h1
-{
-  color: #000000;
-}
-
-h1.tajuk
-{
-  color: #5b2c6f; font-size:40px;
-  font-family: Lucida Handwriting;
-}
-
-body 
-{ 
-  font-family: "Lobster", sans-serif; 
-  font-weight: 500; 
-  font-style: normal; 
-} 
-
-/*-------------- kat sini start coding banner -----------------*/* 
-{
-  box-sizing: content-box
-}
-
-.mySlides 
-{
-  display: none
-}
-
-img 
-{
-  vertical-align: middle;
-}
-
-/* Slideshow container */
-.slideshow-container 
-{
-  max-width: 1200px;
-  position: relative;  
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next 
-{  
-  cursor: pointer;
-  position: absolute;  
-  top: 50%;
-  width: auto;  
-  padding: 16px;
-  margin-top: -22px;  
-  color: white;
-  font-weight: bold;  
-  font-size: 18px;
-  transition: 0.6s ease;  
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next" and "prev" buttons outside the image */
-.prev {
-  left: -50px; /* Move the button 50px to the left of the image */
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.next {
-  right: -50px; /* Move the button 50px to the right of the image */
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover 
-{  
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.centered-text 
-{
-  position: absolute;          /* Allows precise positioning */
-  top: 50%;                    /* Centers vertically */
-  left: 50%;                   /* Centers horizontally */
-  transform: translate(-50%, -50%); /* Corrects positioning offset */
-  font-size: 30px;             /* Adjust text size */
-  color: #DAA520;                /* Text color for contrast */
-  font-family: "Lucida Handwriting", cursive; /* Matches your style */
-  text-align: center;          /* Aligns text within the element */
-}
-   
-/* The dots/bullets/indicators */
-.dot 
-{
-  cursor: pointer;  
-  height: 15px;
-  width: 15px;  
-  margin: 0 2px;
-  background-color: #bbb;  
-  border-radius: 50%;
-  display: inline-block;  
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover 
-{  
-  background-color: #717171;
-}
-   
-/* Fading animation */
-.fade 
-{
-  animation-name: fade;  animation-duration: 1.5s;
-}
-   
-@keyframes 
-fade 
-{
-  from {opacity: .4}   to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) 
-{
-  .prev, .next,.text 
-  {font-size: 11px}
-}
-
-     
+    
