@@ -5,6 +5,17 @@
 
 <link rel="stylesheet" href="css/mainpage.css">
 
+<script>
+  // Function to handle navigation with a pop-up confirmation
+  function confirmNavigation(event, url) {
+      event.preventDefault(); // Prevent default navigation
+      const userResponse = confirm("Do you want to move to the next page?");
+      if (userResponse) {
+          window.location.href = url; // Redirect to the target page
+      }
+  }
+</script>
+
 <body>
 
     <!-- Header -->
@@ -13,15 +24,14 @@
 
     <!-- Navigation -->
     <table>
-        <tr>
-            <td><a href="mainpage.html">Home</a></td>
-            <td><a href="biodata.html">About Me</a></td>
-            <td><a href="sport.html">Sport</a></td>
-            <td><a href="experience.html">Experience</a></td>
-            <td><a href="picture.html">My Picture</a></td>
-            
-        </tr>
-    </table>
+      <tr>
+          <td><a href="mainpage.html" onclick="confirmNavigation(event, 'mainpage.html')">Home</a></td>
+          <td><a href="biodata.html" onclick="confirmNavigation(event, 'biodata.html')">About Me</a></td>
+          <td><a href="sport.html" onclick="confirmNavigation(event, 'sport.html')">Sport</a></td>
+          <td><a href="experience.html" onclick="confirmNavigation(event, 'experience.html')">Experience</a></td>
+          <td><a href="picture.html" onclick="confirmNavigation(event, 'picture.html')">My Picture</a></td>
+      </tr>
+  </table>
 
     <!-- Slideshow -->
     <div class="slideshow-container">
@@ -107,21 +117,20 @@
 
         <!-- Footer -->
         <div class="footer">
-          &copy; 2024 KIMI WORLD | All Rights Reserved.
-          <p> Follow me on:
-              <a href="https://www.instagram.com/_izzad04/profilecard/?igsh=MWsxcDJ6dXMxNnczOQ==" target="_blank">
-                  <img src="image/logoFB.png" alt="Facebook" style="width: 40px; height: 40px;"> 
-              </a>
-  
-              <a href="https://www.instagram.com/_izzad04/profilecard/?igsh=MWsxcDJ6dXMxNnczOQ==" target="_blank">
-                  <img src="image/logoIG.png" alt="Instagram" style="width: 40px; height: 40px;">
-              </a>
-  
-              <a href="https://www.instagram.com/_izzad04/profilecard/?igsh=MWsxcDJ6dXMxNnczOQ==" target="_blank">
-                  <img src="image/logoTikTok.png" alt="TikTok" style="width: 40px; height: 40px;">
-              </a>
-          </p>
-      </div>
+            <p>&copy; 2024 KIMI WORLD. All Rights Reserved.</p>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px;">
+                <span>Follow me on:</span>
+                <a href="https://www.facebook.com/izzadhakimi04?mibextid=ZbWKwL" target="_blank">
+                    <img src="image/logoFB.png" alt="Facebook" style="width: 30px; height: 30px;">
+                </a>
+                <a href="https://www.instagram.com/_izzad04?igsh=cTNjODdrNHF1ZmZx" target="_blank">
+                    <img src="image/logoIG.png" alt="Instagram" style="width: 30px; height: 30px;">
+                </a>
+                <a href="https://www.tiktok.com/@_izzad04?_t=ZS-8sYm7rfjqOg&_r=1" target="_blank">
+                    <img src="image/logoTikTok.png" alt="TikTok" style="width: 30px; height: 30px;">
+                </a>
+            </div>
+        </footer>
 
 </body>
 </html>
